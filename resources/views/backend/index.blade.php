@@ -56,7 +56,7 @@
               </div>
               <div class="col-sm-9 col-lg-7 widget-right">
                 <div class="large">25.2k</div>
-                <div class="text-muted">Danh mục</div>
+                <div class="text-muted"><a href="{{route('category')}}">Danh Mục</a></div>
               </div>
             </div>
           </div>

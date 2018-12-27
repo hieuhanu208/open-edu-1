@@ -29,7 +29,10 @@ Route::group(['prefix' => 'admin','middleware' => 'CheckLogedOut'], function () 
 
 Route::group(['prefix' => 'category'], function () {
     Route::get('/', 'CategoryController@getCate')->name('category'); 
-     Route::get('edit','CategoryController@editCate');
+    Route::post('/', 'CategoryController@postCate');
+    Route::get('/edit/{id}', 'CategoryController@editCate'); 
+    Route::post('/edit/{id}', 'CategoryController@posteditCate')->name('editCate'); 
+    Route::get('/delete/{id}','CategoryController@deleteCate')->name('delCate');
 });
 
 
