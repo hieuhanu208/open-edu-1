@@ -27,4 +27,9 @@ Route::group(['prefix' => 'admin','middleware' => 'CheckLogedOut'], function () 
     Route::get('/logout','AdminController@getLogout')->name('logout');
 });
 
+Route::group(['prefix' => 'category'], function () {
+    Route::get('/', 'CategoryController@getCate')->name('category'); 
+     Route::get('edit','CategoryController@editCate');
+});
+
 
